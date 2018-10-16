@@ -1,0 +1,72 @@
+---
+- hosts: server
+  remote_user: root
+  tasks:
+
+  - name: Upgrade System
+    apt:
+      name: "*"
+      state: latest
+      force_apt_get: True
+  
+  - name: Install System Required
+    apt:
+      name: "{{ item }}"
+      update_cache: yes
+      force_apt_get: True   
+    with_items:
+      -  postgresql
+      -  nginx
+      -  ttf-wqy-zenhei  
+      -  ttf-wqy-microhei
+      -  htop
+      -  git
+
+  - name: Install Odoo
+    apt:
+      deb:  http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/apps/Odoo/odoo_12.0.latest_all.deb
+
+
+  - name: Install wkhtmltox
+    apt:
+      deb: http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/apps/Odoo/wkhtmltox_0.12.5-1.bionic_amd64.deb
+
+  - name: Remove dependencies that are no longer required
+    apt:
+      autoremove: yes
+      force_apt_get: True
+
+  - name: copy  wkhtmltox
+    command: cp /usr/local/bin/wkhtmltopdf /usr/bin/
+
+  - name: Config Odoo
+    copy:
+      src: odoo.conf
+      dest: /etc/odoo/
+
+  - name: Config Nginx
+    copy:
+      src: default
+      dest: /etc/nginx/sites-available
+
+
+  - name: Started Odoo
+    service:
+      name: odoo
+      state: restarted
+      enabled: yes
+
+  - name: Started Nginx
+    service:
+      name: nginx
+      state: restarted
+      enabled: yes
+  
+  - name: Started PostgreSQL
+    service:
+      name: postgresql
+      state: started
+      enabled: yes
+    
+
+
