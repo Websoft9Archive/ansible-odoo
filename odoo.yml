@@ -11,25 +11,31 @@
   
   - name: Install System Required
     apt:
-      name: "{{ item }}"
+      name: [postgresql,nginx,ttf-wqy-zenhei,ttf-wqy-microhei,htop,git]
       update_cache: yes
       force_apt_get: True   
-    with_items:
-      -  postgresql
-      -  nginx
-      -  ttf-wqy-zenhei  
-      -  ttf-wqy-microhei
-      -  htop
-      -  git
+  
+  - name: add Odoo key
+    apt_key:
+      url: https://nightly.odoo.com/odoo.key
+      
+  - name: add Odoo Repository
+    apt_repository:
+      repo: deb http://nightly.odoo.com/12.0/nightly/deb/ ./
+      filename: odoo
+
 
   - name: Install Odoo
     apt:
-      deb:  http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/apps/Odoo/odoo_12.0.latest_all.deb
+      name: odoo
+      update_cache: yes
+      force_apt_get: True 
+
 
 
   - name: Install wkhtmltox
     apt:
-      deb: http://libs-websoft9-com.oss-cn-qingdao.aliyuncs.com/apps/Odoo/wkhtmltox_0.12.5-1.bionic_amd64.deb
+      deb: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
 
   - name: Remove dependencies that are no longer required
     apt:
