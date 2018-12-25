@@ -1,7 +1,11 @@
 ---
 - hosts: server
-  remote_user: root
+  remote_user: ubuntu
+  sudo: yes
   tasks:
+
+  - name: APT update
+    command: apt update
 
   - name: Upgrade System
     apt:
@@ -35,7 +39,7 @@
 
   - name: Install wkhtmltox
     apt:
-      deb: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
+      deb: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.{{ansible_lsb.codename}}_amd64.deb
 
   - name: Remove dependencies that are no longer required
     apt:
