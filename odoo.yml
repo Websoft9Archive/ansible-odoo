@@ -1,5 +1,5 @@
 ---
-- hosts: server
+- hosts: all
   remote_user: ubuntu
   sudo: yes
   tasks:

@@ -1,2 +1,4 @@
 [server]
-54.215.202.216 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/websoft9.pem ansible_python_interpreter=/usr/bin/python3
+114.116.114.202   ansible_ssh_user=root  ansible_ssh_pass=Qwer1234
+[aws]
+13.56.79.182 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/websoft9.pem ansible_python_interpreter=/usr/bin/python3
