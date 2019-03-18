@@ -1,7 +1,10 @@
 ---
 - hosts: all
   remote_user: ubuntu
-  sudo: yes
+  # sudo: yes
+  become: yes
+  become_method: sudo
+  become_user: root
   tasks:
 
   - name: APT update
@@ -78,5 +81,9 @@
       state: started
       enabled: yes
     
-
+  - name: Remove SSH info
+    shell: rm -rf {{item}}
+    with_items:
+      - /home/ubuntu/.ssh
+      - /root/.ssh
 
