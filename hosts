@@ -1,2 +1,2 @@
 [aws]
-204.236.254.145 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/websoft9.pem ansible_python_interpreter=/usr/bin/python3
+54.218.236.193 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/websoft9.pem ansible_python_interpreter=/usr/bin/python3
