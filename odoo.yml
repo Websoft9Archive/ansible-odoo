@@ -9,7 +9,7 @@
    - name: 'install python'
      raw: 'sudo apt-get -y install python'
 
-- hosts: Odoo
+- hosts: odoo
   remote_user: ubuntu
   become: yes
   become_method: sudo
