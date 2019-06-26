@@ -33,7 +33,4 @@ Odoo,Python,Nginx,PostgreSQL
 
 ## 使用指南
 
-1. 该软件需要绑定域名使用；
-2. 默认登录密码是：admin/admin123
-
 文档链接：http://en.websoft9.com/docs/odoo
