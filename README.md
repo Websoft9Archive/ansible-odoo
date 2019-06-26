@@ -29,7 +29,7 @@ admin_username: websoft9
 ~~~
 
 ## 组件
-Graylog,Nginx,JAVA,MongoDB,AdminMongo(Docker)
+Odoo,Python,Nginx,PostgreSQL
 
 ## 使用指南
 
