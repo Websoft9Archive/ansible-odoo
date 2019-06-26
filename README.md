@@ -12,17 +12,9 @@
 
 ## 版本
 
-本项目Graylog官方采用APT安装方式，修改变量选择大版本，打版本号查看官方关于DEB/APT源的[说明文档](http://docs.graylog.org/en/3.0/pages/installation/operating_system_packages.html)，例如：
+Odoo官方采用APT安装方式，官方提供了最新版本的源地址，因此能够保证每次安装都是最新版本。[版本号查看](https://www.odoo.com/zh_CN/page/download)
 
-版本文件：roles/graylog2/defaults/main.yml
-
-
-~~~
- //例如修改2.5为3.0
- graylog_ver: 3.0
-~~~
-
-小版本号通过Graylog的[下载中心](https://www.graylog.org/downloads)查看
+Odoo的具体版本号采用大版本+日期的组织方式，例如：Odoo12-20190624
 
 
 ## 安装指南
