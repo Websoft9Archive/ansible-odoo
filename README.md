@@ -28,9 +28,6 @@ Odoo的具体版本号采用大版本+日期的组织方式，例如：Odoo12-20
 admin_username: websoft9
 ~~~
 
-阿里云 以及 华为云 需要把 admin_username 改为 root
-腾讯云 和AWS admin_username为ubunut
-
 ## 组件
 Graylog,Nginx,JAVA,MongoDB,AdminMongo(Docker)
 
@@ -39,4 +36,4 @@ Graylog,Nginx,JAVA,MongoDB,AdminMongo(Docker)
 1. 该软件需要绑定域名使用；
 2. 默认登录密码是：admin/admin123
 
-文档链接：[readme.txt](readme.txt)
+文档链接：http://en.websoft9.com/docs/odoo
