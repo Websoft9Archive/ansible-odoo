@@ -15,6 +15,8 @@
   become_method: sudo
   become_user: root
   remote_user: '{{admin_username}}'
+  vars:
+    cloud: none
   tasks:
 
   - name: APT update
@@ -91,6 +93,10 @@
       state: started
       enabled: yes
     
+  - name: Init for azure
+    shell: waagent -deprovision+user --force
+    when: cloud == "azure"
+
   - name: Remove SSH info
     file: 
       path: '{{item}}'
@@ -98,5 +104,6 @@
     with_items:
       - /home/{{admin_username}}/.ssh
       - /root/.ssh
+    when: cloud == "none"
 
       
