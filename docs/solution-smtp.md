@@ -15,14 +15,15 @@ Follow is the sample using **SendGrid's SMTP Service** to configure sending mail
    SMTP username: websoft9smpt
    SMTP password: #fdfwwBJ8f    
    ```
-2. 登录 Odoo 控制台，安装 SMTP 所需的 **Discuss** 模块
+2. Log in to the Odoo Console, intall the **Discuss** module that SMTP need
    ![Odoo SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-discussmodule-websoft9.png)
 
-3. 通过：【Settings】>【General Settings】>【Discuss】开始配置邮箱
+3. Open **Settings** > **General Settings** > **Discuss** to start configure SMTP
    ![Odoo SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-gsetmail-websoft9.png)
 
-3. 填写 SMTP 参数
+3. Fill in the SMTP parameters
    ![Odoo SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-smtps-websoft9.png)
-4. Click the **Test Connection**, you can get the feedback *"no errors were..."* if SMTP is useful
+
+4. Click the **Test Connection**
 
 More SMTP Service(Gmail, Hotmail, QQ mail, Yahoo mail, SendGrid and so on)  settings or Issues with SMTP, please refer to Websoft9's *[SMTP Guide](https://support.websoft9.com/docs/faq/tech-smtp.html)*

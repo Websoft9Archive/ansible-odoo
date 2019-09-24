@@ -10,26 +10,26 @@ If you have completed the Odoo deployment on Cloud Platform, the following steps
 
 ## Odoo Installation Wizard
 
-1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will enter the register interface of Odoo
+1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will enter installation wizard of Odoo
  ![Odoo初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-startcreatedb-websoft9.png)
 
-2. 填写好所有参数，点击【create database】按钮，开始初始化安装。
-   > 其中 Email 和 Password 是登录账号密码，务必牢记之
+2.Fill in all items, then click **create database** button to start create one Company's database
+  > The Email and Password is credentials for log in to Odoo
 
-3. 初始化安装完成后，登录后台，安装所需的 APP
+3. After the create database is complete, log in to the Odoo Console and install the apps your required.
   ![Odoo APPS](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-consoleui-websoft9.png)
 
-4. 注销登录，在登录界面点击【Manage Database】链接  
-  ![Odoo manage database](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-loginpage-websoft9.png)
+4. Log out, click the **Manage Database** in the log in page of Odoo  
+  ![Odoo manage database](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-loginpage-websoft9.png)
 
-5. 点击【set a master password】给数据库设置一个主密码保护数据库（非常重要）
-  ![Odoo set a pssword](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setmasterpw-websoft9.png)
+5. Click the **set a master password** to set a management password for Odoo's databases(very important)
+  ![Odoo set a pssword](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setmasterpw-websoft9.png)
 
-6. Odoo 支持多租户（多企业组织），点击【create database】，可以再增加一个企业组织
-  ![Odoo APPS](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidb-websoft9.png)
+6. Odoo Support for multi-enterprise, so you can **create database** again for creating new company
+  ![Odoo create database again](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidb-websoft9.png)
 
-7. 回到登录界面，发现会多一个 database 选项
-  ![Odoo APPS](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidblogin-websoft9.png)
+7. Return to log in page, you can see a new database listed for log in
+  ![Odoo login](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidblogin-websoft9.png)
 
 > More useful Odoo guide, please refer to [Odoo Documentation](https://www.odoo.com/documentation/master/index.html)
 
@@ -43,6 +43,6 @@ Your TCP:80 of Security Group Rules is not allowed so there no response from Chr
 
 PostgreSQL
 
-#### 勾选 Demo data了，以后还能删除这些数据吗？
+#### Check the Demo data, can you delete the data later?
 
-You never use demo database for business
+Their no tools for you to delete Demo data. It is recommended to delete the database directly and then add it again (the Demo data is no longer checked)

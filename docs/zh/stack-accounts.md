@@ -14,7 +14,7 @@ Odoo 采用 [Peer Authentication](https://www.postgresql.org/docs/10/auth-method
 
 1. 远程桌面登录到Windows服务器
 2. 打开pgAdmin，输入账号（默认用户名 : `openpg`，默认密码 : `openpgpwd`）
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-pgadmin2-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-pgadmin2-websoft9.png)
 
 ## Linux
 

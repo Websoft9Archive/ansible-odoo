@@ -6,30 +6,35 @@ The Odoo deployment package contains a sequence software (referred to as "compon
 
 ### Odoo
 
-Odoo installation directory: */data/wwwroot/metabase*  
-Odoo configuration file: */data/wwwroot/metabase/metabase.conf*  
+Odoo installation directory: */usr/lib/python3/dist-packages/odoo*  
+Odoo configuration file: */etc/odoo/odoo.conf*  
+Odoo log directory: */var/log/odoo*    
 
-### Java
+### Python
 
-Java Directory: */usr/lib/jvm*
+Python installation directory: * /usr/lib/python-v*    
+Python VM directory: */usr/bin/python-v*
+
+-v is version 2.7/3/3.6/3.7
 
 ### Nginx
 
-Nginx vhost configuration file: */etc/nginx/sites-available/default.conf*  
+Nginx vhost configuration file: */etc/nginx/sites-available/default*  
 Nginx main configuration file: */etc/nginx/nginx.conf*  
 Nginx logs file: */var/log/nginx/*
 
-### MYSQL
+### PostgreSQL
 
-MySQL installation directory: */usr/local/mysql*  
-MySQL data directory: */data/mysql*  
-MySQL configuration file: */etc/my.cnf*    
-MySQL Web Management URL: *http://Internet IP:9090*, get credential from [Username and Password](/stack-accounts.md)
+PostgreSQL installation directory: */usr/bin/psql*  
+PostgreSQL data file: */var/lib/postgresql*   
+PostgreSQL configuration file: */etc/postgresql/10/main/postgresql.conf*      
+PostgreSQL log directory: */var/log/postgresql*  
+PostgreSQL GUI management: Odoo's log in page have provided the database GUI management tools
 
 
 ## Ports
 
-You can view all the used ports from the official docs [Package defaults](https://docs.gitlab.com/omnibus/package-information/defaults.html) . You can control(open or shut down) ports by **[Security Group Setting](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** of your Cloud Server whether the port can be accessed from Internet.
+You can control(open or shut down) ports by **[Security Group Setting](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** of your Cloud Server whether the port can be accessed from Internet.
 
 These ports should be opened for this application:
 
@@ -38,7 +43,7 @@ These ports should be opened for this application:
 | MySQL | 3306 | Remote connect MySQL | Optional |
 | HTTP | 80 | HTTP requests for Odoo | Required |
 | HTTPS | 443 | HTTPS requests Odoo | Optional |
-| phpMyAdmin on Docker | 9090 | Web managment GUI for MySQL | Optional |
+| PostgreSQL | 5432 | Remote connect PostgreSQL | Optional |
 
 ## Version
 
@@ -48,15 +53,13 @@ You can see the version from product page of Marketplace. However, after being d
 # Linux Version
 lsb_release -a
 
-# Java Version
-java --version
+# Python Version
+python --version  
+python3 --version
 
 # Nginx version:
 nginx -v
 
-# MySQL version:
-mysql -V
-
-# Dokcer:
-docker --version
+# PostgeSQL version:
+psql --version
 ```

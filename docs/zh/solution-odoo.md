@@ -7,19 +7,19 @@
 Odoo 后台提供了设置界面，参考：
 
 1. 登录 Odoo 后，打开点击左上角的设置图标，打开【Settings】项
-   ![Odoo设置界面](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingspanel-websoft9.png)
+   ![Odoo设置界面](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingspanel-websoft9.png)
 2. 接下来可以进行：安装apps，设置语言，增加用户，企业初始化等操作
 
 ### 设置企业 Logo
-![Odoo 设置logo](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingslogo-websoft9.png)
+![Odoo 设置logo](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingslogo-websoft9.png)
 
 ### 增加语言
 1. 通过【Settings】控制台增加一个语言
-  ![Odoo 增加语言](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingslangs-websoft9.png)
+  ![Odoo 增加语言](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-settingslangs-websoft9.png)
 2. 转到【Administrator】>【Prefrences】  
-  ![Odoo 用户管理](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-pref-websoft9.png)
+  ![Odoo 用户管理](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-pref-websoft9.png)
 3. 给用户设置语言
-  ![Odoo 设置语言](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-language002-websoft9.png)
+  ![Odoo 设置语言](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-language002-websoft9.png)
 
 ## 开发者模式
 

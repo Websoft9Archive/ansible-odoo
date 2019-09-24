@@ -2,11 +2,24 @@
 
 #### Odoo support multi-language?
 
-Yes
+Yes, refer to [Add language](/solution-odoo.md#add-your-language)
 
 #### Where is the database connection configuration of Odoo?
 
-Database configuration information in *metabase.conf* in the Odoo installation directory, [refer to the installation directory](/stack-components.md#metabase)
+Odoo used the [Peer Authentication](https://www.postgresql.org/docs/10/auth-methods.html#AUTH-PEER) to connect PostgreSQL, the peer authentication method works by obtaining the client's operating system user name from the kernel and using it as the allowed database user name (with optional user name mapping). This method is only supported on local connections.
+
+### Why can't I see the Odoo Updates feature in the Settings panel?
+
+The function is only used in the developer mode, make sure you have change to [Developer Mode](/solution-odoo.md#enable-developer-mode)
+
+#### How can I delete the Demo data of Odoo?
+
+It is recommended to delete the database directly and then add it again (the Demo data is no longer checked)
+
+#### Can Odoo export PDF files?
+
+Yes, you can test it from the modules: Invoice, Purchase
+![Odoo print to PDF](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-printtopdf-websoft9.png)
 
 #### If there is no domain name, can I deploy Odoo?
 
@@ -18,24 +31,20 @@ The password is stored in the server related file: `/credentials/password.txt`
 
 #### Is there a web-base GUI database management tools?
 
-Yes, phpMyAdmin is on it, visit by http://Internet IP:9090
-
-#### How to disable phpMyAdmin access?
-
-Disable port 9090 of the server security group
+Yes, Odoo includes the database GUI functions, refer to [Odoo Mange Database function](/admin-postgresql.md) 
 
 #### Is it possible to modify the source path of Odoo?
 
-Yes, modify it by [Nginx vhost configuration file](/stack-components.md)
+No
 
 #### How to change the permissions of filesytem?
 
 Change owner(group) or permissions like below:
 
 ```shell
-chown -R nginx.nginx /data/wwwroot
-find /data/wwwroot -type d -exec chmod 750 {} \;
-find /data/wwwroot -type f -exec chmod 640 {} \;
+chown -R nginx.nginx /data
+find /data -type d -exec chmod 750 {} \;
+find /data -type f -exec chmod 640 {} \;
 ```
 #### What's the difference between Deployment and Installation?
 

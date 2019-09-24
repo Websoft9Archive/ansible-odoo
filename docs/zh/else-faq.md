@@ -2,7 +2,7 @@
 
 #### Odoo支持多语言吗？
 
-支持多语言（包含中文），系统默认根据浏览器自动选择语言 
+支持多语言（包含中文），参考：[语言设置](/zh/solution-odoo.md#增加语言)
 
 #### Odoo数据库连接配置信息在哪里？
 
@@ -19,7 +19,7 @@ Odoo 采用 [Peer Authentication](https://www.postgresql.org/docs/10/auth-method
 #### Odoo 是否可以导出 PDF 文件？
 
 可以。安装 Invoice, Purchase 等模块可以测试 print to PDF 功能
-![Odoo 打印PDF](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-printtopdf-websoft9.png)
+![Odoo 打印PDF](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-printtopdf-websoft9.png)
 
 #### 如果没有域名是否可以部署 Odoo？
 

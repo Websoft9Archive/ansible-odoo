@@ -56,7 +56,7 @@ sidebarDepth: 3
 
 1. 通过WinSCP将网站目录（*/usr/lib/python3/dist-packages/odoo*）**压缩后**再完整的下载到本地
 2. 通过 Odoo 自带的数据库管理工具备份数据库
-   ![Odoo 备份数据库](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
+   ![Odoo 备份数据库](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
 3. 将程序文件和数据库文件放到同一个文件夹，根据日期命名
 4. 备份工作完成
 

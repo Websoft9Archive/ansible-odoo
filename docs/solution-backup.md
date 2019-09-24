@@ -51,7 +51,7 @@ The general manual backup operation steps are as follows:
 
 1. Just compression and download the entire */usr/lib/python3/dist-packages/odoo* directory by SFTP 
 2. Export Odoo's database by [phpMyAdmin](/zh/admin-mysql.md)
-   ![Odoo Backup database](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
+   ![Odoo Backup database](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
 3. Put the source code file and database file in the same folder, named according to the date
 4. Backup completed
 

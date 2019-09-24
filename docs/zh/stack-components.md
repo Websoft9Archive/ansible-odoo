@@ -31,9 +31,9 @@ Nginx 日志目录： */var/log/nginx/*
 
 #### PostgreSQL
 
-PostgreSQL 安装路径: */usr/bin/psql*  
-PostgreSQL 数据文件 */var/lib/postgresql*   
-PostgreSQL 配置文件: */etc/postgresql/10/main/postgresql.conf*      
+PostgreSQL 安装路径：*/usr/bin/psql*  
+PostgreSQL 数据文件：*/var/lib/postgresql*   
+PostgreSQL 配置文件：*/etc/postgresql/10/main/postgresql.conf*      
 PostgreSQL 日志文件：*/var/log/postgresql*  
 PostgreSQL 可视化管理地址: Odoo 登录界面提供了数据库的导入和密码修改等功能
 

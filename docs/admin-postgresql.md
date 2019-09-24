@@ -1,58 +1,67 @@
 # PostgreSQL
 
-Odoo 预装包中内置 PosgreSQL 及可视化数据库管理功能 ，使用请参考如下步骤：
+Database manager of Odoo can help you backup,duplicate,restore database online.
 
-1. 在 Odoo 登录界面点击【Manage Database】链接  
-![Odoo manage database](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-loginpage-websoft9.png)
+1. In the log in interface, you can click the link **Manage Database** to manage PostgreSQL
+![Odoo manage database](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-loginpage-websoft9.png)
 
-2. 点击【set a master password】给数据库设置一个主密码保护数据库（非常重要）
-![Odoo set a password](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setmasterpw-websoft9.png)
+2. Click **set a master password** to set a password for databases management(very important)
+![Odoo set a password](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setmasterpw-websoft9.png)
 
-3. 设置密码
-![Odoo set a password](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setapw-websoft9.png)
+3. Set a password
+![Odoo set a password](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setapw-websoft9.png)
 
-3. 选择操作项，管理数据库
-![Odoo set a password](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-manages-websoft9.png)
+3. Manage databases
+![Odoo set a password](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-manages-websoft9.png)
 
-## 新增
+## Create Database
 
-Odoo 支持多租户（多企业组织），增加一个数据库就等于增加一个企业。多个企业共同使用一套 Odoo，采用不同的账号登录，相互不干扰。
+Odoo support multi-enterpises, create database means add new company in Odoo. Multi company can use the Odoo in one Server Instance together
 
-1. 点击【create database】，输入密码，设置名称
-   ![Odoo 新增数据库](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidb-websoft9.png)
-2. 新增完成后，你会看到数据库管理界面列出新增的数据库
+1. Go to the **Manage Databases** interface of of Odoo
+2. Click the **create database**
+   ![Odoo create database](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidb-websoft9.png)
+3. You can see the new database is listed when completed create database
 
-## 备份
+## Backup
 
-1. 输入密码，选择备份格式，点击【Backup】
-   ![Odoo 备份](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
+1. Go to the **Manage Databases** interface of of Odoo
+2. Click the **backup**
+   ![Odoo backup](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
+3. After the backup is completed, the system will automatically download the backup data (zip file).
 
-2. 备份完成后，系统会自动下载备份数据（zip文件）
+## Duplicate
 
-## 复制
+You can completely copy a business organization as a data for a new business organization.
 
-可以完整复制一个企业组织，作为新企业组织的数据
+1. Go to the **Manage Databases** interface of of Odoo
+2. Click the **Duplicate**
+![Odoo Duplicate](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesdp-websoft9.png)
+3. You can see the new database is listed when completed duplicate database
 
-1. 输入密码，设置名称，点击【Continue】
-![Odoo set a pssword](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesdp-websoft9.png)
+> When you duplicate a local database, it is strongly advised to change the duplicated database’s uuid (Unniversally Unique Identifier), since this uuid is how your database identifies itself with our servers. Having two databases with the same uuid could result in invoicing problems or registration problems down the line.
 
-2. 复制成功后，数据库管理栏目会列出新复制的数据库
+## Delete
 
-## 删除
+1. Go to the **Manage Databases** interface of of Odoo
+2. Click the **Delete**
 
-请谨慎操作
+> Delete operation is irreversible, please be cautious
 
-## 恢复
+## Restore Database
 
-数据库被删除后，可以通过备份进行恢复
+After the database is deleted, it can be restored by backup.
 
-1. 输入密码，选择备份文件，命名恢复后的数据库名称，点击【Continue】
-![Odoo set a pssword](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesrs-websoft9.png)
+1. Go to the **Manage Databases** interface of of Odoo
+2. Click the **Delete**
+3. Upload backup files and rename, then click **Continue**
+![Odoo set a pssword](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesrs-websoft9.png)
+4. When you see the error "413 Request Entity Too Large" in the process of Restore, refer to [here](/zh/else-troubleshooting.md#odoo-related)
 
-2. 数据库恢复过程中可能会出现"413 Request Entity Too Large"，[解决办法](/zh/else-troubleshooting.md#odoo类)
+## Set Master Password
 
-## 修改主密码
+Only the master password can be modified. If you forget the master password, reset the password scheme to be studied.
 
-只可以修改主密码，如果忘记了主密码，重置密码方案待研究
+## More
 
-> 阅读Websoft9提供的 [《PostgreSQL教程》](https://support.websoft9.com/docs/postgresql/zh/) ，掌握更多的 PostgreSQL 实用技能：修改密码、导入/导出数据、创建用户、开启或关闭远程访问、日志配置等
+Websoft9 provide *[PostgreSQL guide](https://support.websoft9.com/docs/postgresql)* for more useful skills of MySQL, includes: modify password, create user, import/export data, enable or disable remote visit, log configuation and so on.

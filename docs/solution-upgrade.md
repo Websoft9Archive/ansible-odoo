@@ -26,12 +26,12 @@ yum update -y
 
 ## Odoo Upgrade
 
-Odoo 后台提供了在线升级能力，让升级工作变得非常简单。Follow the steps below to complete the upgrade:
+Odoo can be upgraded from Console, online follow the steps below to complete the upgrade:
 
-1. 登录 Odoo 后台，[启动开发者模式](/zh/solution-odoo.md#开发者模式)
-2. 通过 【Settings】>【Updates】开始更新 Odoo 主程序
-   ![Odoo升级提示](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-upgradesui-websoft9.png)
-3. 升级成功会有 “Well done...” 的提示
-4. 点击 【Update Apps list】，开始更新 Odoo 模块
+1. Log in Odoo Console, [Enable developer mode](/solution-odoo.md#enable-developer-mode)
+2. Go to **Settings** > **Updates** to start upgrade Odoo
+   ![Odoo upgrade reminder](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-upgradesui-websoft9.png)
+3. When completed the upgrade, you can get the successful reminder “Well done...”
+4. Click the **Update Apps list** to upgrade all Odoo's Modules if you need
 
-更多更新方案和注意事项请参考官方文档：[Odoo Update](https://www.odoo.com/documentation/master/setup/update.html)
+More details please refer to official docs [Odoo Update](https://www.odoo.com/documentation/master/setup/update.html)
