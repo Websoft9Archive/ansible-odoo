@@ -20,6 +20,7 @@ module.exports = [
       '/zh/solution-https',
       '/zh/solution-backup',
       '/zh/solution-upgrade',
+      '/zh/solution-odoo',
       '/zh/solution-more',
     ]
   },

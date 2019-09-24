@@ -8,9 +8,13 @@
 
 ## PostgreSQL
 
-Odoo 采用 [Peer Authentication](https://www.postgresql.org/docs/10/auth-methods.html#AUTH-PEER) 认证方式连接 PostgreSQL，即以操作系统用户登录数据库，无需密码
+Odoo 采用 [Peer Authentication](https://www.postgresql.org/docs/10/auth-methods.html#AUTH-PEER) 方式连接 PostgreSQL，即以操作系统用户登录数据库，无需密码。Odoo 本身集成了管理和备份 PostgreSQL的功能，请参考 [Odoo 数据库管理](/zh/admin-postgresql.md)
 
-> 需要管理和备份 PostgreSQL，请参考 [Odoo 数据库管理](/zh/admin-postgresql.md)
+另外，**Windows版**安装了 PostgreSQL 桌面工具 pgAdmin，使用参考：
+
+1. 远程桌面登录到Windows服务器
+2. 打开pgAdmin，输入账号（默认用户名 : `openpg`，默认密码 : `openpgpwd`）
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-pgadmin2-websoft9.png)
 
 ## Linux
 
@@ -24,7 +28,7 @@ Odoo 采用 [Peer Authentication](https://www.postgresql.org/docs/10/auth-method
    |  AWS   |  ubuntu   |
    |  阿里云，华为云，腾讯云   |  root   |
 
-## Windows系统
+## Windows
 
 * 主机地址：服务公网IP地址
 * 连接方式：云控制台在线管理 或 远程桌面工具

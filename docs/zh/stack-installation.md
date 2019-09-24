@@ -33,7 +33,7 @@
 
 
 
-> 需要了解更多Odoo的使用，请参考官方文档：[Odoo Documentation](https://www.odoo.com/documentation/master/setup/install.html)
+> 需要了解更多Odoo的使用，请参考官方文档：[Odoo Documentation](https://www.odoo.com/documentation/master/index.html)
 
 ## 常见问题
 

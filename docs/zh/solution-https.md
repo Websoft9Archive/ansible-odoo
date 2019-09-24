@@ -1,6 +1,6 @@
 # SSL/HTTPS
 
-网站完成域名绑定且可以通过HTTP访问之后，方可设置HTTPS。
+网站完成[域名绑定](/zh/solution-more.md#域名绑定)且可以通过HTTP访问之后，方可设置HTTPS。
 
 Odoo预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。
 
@@ -13,7 +13,7 @@ Odoo预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let
 如果你已经申请了商业证书，只需三个步骤，即可完成HTTPS配置
 
 1. 将申请的证书、 证书链文件和秘钥文件上传到 */data/cert* 目录
-2. 打开虚拟主机配置文件：*/etc/nginx/conf.d/default.conf* ，插入**HTTPS 配置段** 到 *server{ }* 中
+2. 打开虚拟主机配置文件：*/etc/nginx/sites-available/default* ，插入**HTTPS 配置段** 到 *server{ }* 中
  ``` text
    #-----HTTPS template start------------
    listen 443 ssl; 
