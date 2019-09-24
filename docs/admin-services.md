@@ -5,10 +5,10 @@ These commands you must know when you using the Odoo of Websoft9
 ### Odoo
 
 ```shell
-sudo systemctl start metabase
-sudo systemctl stop metabase
-sudo systemctl restart metabase
-sudo systemctl status metabase
+sudo systemctl start odoo
+sudo systemctl stop odoo
+sudo systemctl restart odoo
+sudo systemctl status odoo
 ```
 
 ### Nginx
@@ -20,19 +20,11 @@ sudo systemctl restart nginx
 sudo systemctl status nginx
 ```
 
-### MySQL
+### PostgreSQL
 
 ```shell
-sudo systemctl start mysql
-sudo systemctl stop mysql
-sudo systemctl restart mysql
-sudo systemctl status mysql
-```
-
-### Docker
-```shell
-sudo systemctl star docker
-sudo systemctl stop docker
-sudo systemctl restart docker
-sudo systemctl status docker
+sudo systemctl start postgresql
+sudo systemctl stop postgresql
+sudo systemctl restart postgresql
+sudo systemctl status postgresql
 ```

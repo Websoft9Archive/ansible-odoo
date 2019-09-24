@@ -16,27 +16,22 @@ For Odoo maintenance, focus on the following two Update & Upgrade jobs
 Run an update command to complete the system update:
 
 ``` shell
-#For Centos&Redhat
-yum update -y
-
 #For Ubuntu&Debian
 apt update && apt upgrade -y
+
+#For Centos&Redhat
+yum update -y
 ```
 > This deployment package is preconfigured with a scheduled task for automatic updates. If you want to remove the automatic update, please delete the corresponding Cron
 
 ## Odoo Upgrade
 
-Follow the steps below to complete the upgrade:
+Odoo 后台提供了在线升级能力，让升级工作变得非常简单。Follow the steps below to complete the upgrade:
 
-1. Log in Odoo, go to Admin->Setting->Updates, the system will give you a reminder if there is a new upgrade package
-![Odoo updates reminder](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-updatereminder-websoft9.png)
+1. 登录 Odoo 后台，[启动开发者模式](/zh/solution-odoo.md#开发者模式)
+2. 通过 【Settings】>【Updates】开始更新 Odoo 主程序
+   ![Odoo升级提示](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-upgradesui-websoft9.png)
+3. 升级成功会有 “Well done...” 的提示
+4. 点击 【Update Apps list】，开始更新 Odoo 模块
 
-2. Click the **Upgrade** button, go to the [Odoo Install](https://metabase.com/start/) page
-
-3. The deployment package we provide is in the jar package installation mode, so on the installation page we select the **Custom install** mode.
-![Odoo install](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-updatedl-websoft9.png)
-
-3. Download teh Odoo.jar pakage and upload to your instance's directory `/data/wwwroot/metabase`
-![Odoo upload](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-updatereplace-websoft9.png)
-
-4. Overwrite existing files and reload the Odoo
+更多更新方案和注意事项请参考官方文档：[Odoo Update](https://www.odoo.com/documentation/master/setup/update.html)

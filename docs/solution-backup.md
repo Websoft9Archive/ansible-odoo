@@ -49,9 +49,9 @@ Manual backup for application is based on the **Exporting source code and databa
 ```
 The general manual backup operation steps are as follows:
 
-1. Just compression and download the entire */data/wwwroot/metabase* directory by SFTP 
+1. Just compression and download the entire */usr/lib/python3/dist-packages/odoo* directory by SFTP 
 2. Export Odoo's database by [phpMyAdmin](/zh/admin-mysql.md)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-export-websoft9.png)
+   ![Odoo Backup database](http://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
 3. Put the source code file and database file in the same folder, named according to the date
 4. Backup completed
 

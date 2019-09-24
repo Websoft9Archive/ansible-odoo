@@ -11,7 +11,7 @@ If you want to use a free certificate, just run the one command `certbot` on you
 If you have applied for a commercial certificate, complete the HTTPS configuration in just three steps:
 
 1. Upload your certificate to the directory of your instance: */data/cert* 
-2. Edit the vhost configuration file: */etc/nginx/conf.d/default.conf* 
+2. Edit the vhost configuration file: */etc/nginx/sites-available/default* 
 3. Insert the **HTTPS template** into *server{  }* and modify to your certificate path
    ``` text
    #-----HTTPS template start------------

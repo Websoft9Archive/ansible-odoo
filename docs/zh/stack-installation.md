@@ -47,4 +47,4 @@ PostgreSQL
 
 #### 勾选 Demo data了，以后还能删除这些数据吗？
 
-官方并没有提供 Demo data 的删除工具，因此建议商用的话，请勿勾选 Demo data
+官方并没有提供 Demo data 的删除工具，建议直接删除数据库，然后再新增（此时不再勾选 Demo data）
