@@ -40,6 +40,7 @@
   become_method: sudo
   tasks:
     - {role: common, tags: "common"}
+    - {role: nginx, tags: "nginx"}
     - {role: odoo, tags: "odoo"}
 
 
