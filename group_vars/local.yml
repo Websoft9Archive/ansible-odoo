@@ -1,0 +1,4 @@
+# 保存当前playbook变量/组变量 优先级 大于 roles 变量
+# 命名local.yml 对应 inventory 文件 hosts 内的 local 组
+
+public_roles: [common]

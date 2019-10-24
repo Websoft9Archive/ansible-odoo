@@ -1,97 +1,47 @@
 ---
+- name: onlyoffice
+  hosts: local
+  connection: local
+  gather_facts: False
+  pre_tasks:
+    - name: Set Git repo
+      shell: |
+        git init
+        git config core.sparsecheckout true
+        git remote add origin https://github.com/Websoft9/ansible-roles.git
+        echo {{ item }} >> .git/info/sparse-checkout
+      args:
+        chdir: roles
+      with_items:
+        - "{{ public_roles }}"
+
+    - name: Get Public Roles
+      git:
+        repo: https://github.com/Websoft9/ansible-roles.git
+        dest: roles
+        clone: no
+
+    - name: Delete .git
+      file:
+        path: roles/.git
+        state: absent
+
 - name: Odoo
-  hosts: all
+  hosts: Odoo
   become: yes
   become_method: sudo
-  become_user: root
-  remote_user: '{{admin_username}}'
   gather_facts: False
   pre_tasks:
    - name: 'install python'
      raw: 'sudo apt-get -y install python'
 
-- hosts: all
+- hosts: Odoo
   become: yes
   become_method: sudo
-  become_user: root
-  remote_user: '{{admin_username}}'
-  vars:
-    cloud: none
   tasks:
+    - {role: common, tags: "common"}
+    - {role: odoo, tags: "odoo"}
 
-  - name: APT update
-    command: apt update
-
-  - name: Upgrade System
-    apt:
-      name: "*"
-      state: latest
-      force_apt_get: True
-  
-  - name: Install System Required
-    apt:
-      name: [postgresql,nginx,ttf-wqy-zenhei,ttf-wqy-microhei,htop,git]
-      update_cache: yes
-      force_apt_get: True   
-  
-  - name: add Odoo key
-    apt_key:
-      url: https://nightly.odoo.com/odoo.key
-      
-  - name: add Odoo Repository
-    apt_repository:
-      repo: deb http://nightly.odoo.com/12.0/nightly/deb/ ./
-      filename: odoo
-
-
-  - name: Install Odoo
-    apt:
-      name: odoo
-      update_cache: yes
-      force_apt_get: True 
-
-
-
-  - name: Install wkhtmltox
-    apt:
-      deb: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.{{ansible_lsb.codename}}_amd64.deb
-
-  - name: Remove dependencies that are no longer required
-    apt:
-      autoremove: yes
-      force_apt_get: True
-
-  - name: copy  wkhtmltox
-    command: cp /usr/local/bin/wkhtmltopdf /usr/bin/
-
-  - name: Config Odoo
-    copy:
-      src: odoo.conf
-      dest: /etc/odoo/
-
-  - name: Config Nginx
-    copy:
-      src: default
-      dest: /etc/nginx/sites-available
-
-
-  - name: Started Odoo
-    service:
-      name: odoo
-      state: restarted
-      enabled: yes
-
-  - name: Started Nginx
-    service:
-      name: nginx
-      state: restarted
-      enabled: yes
-  
-  - name: Started PostgreSQL
-    service:
-      name: postgresql
-      state: started
-      enabled: yes
 
 
       

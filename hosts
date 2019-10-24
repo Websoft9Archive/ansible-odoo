@@ -1,2 +1,5 @@
+[local]
+127.0.0.1
+
 [Odoo]
-54.218.236.193 ansible_ssh_user=ubuntu 
+13.90.205.6  ansible_ssh_user=websoft9  ansible_ssh_pass=Qwerty123456  ansible_sudo_pass=Qwerty123456
