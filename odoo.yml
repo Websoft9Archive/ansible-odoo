@@ -12,7 +12,8 @@
   hosts: all
   become: yes
   become_method: sudo
-  tasks:
+  
+  roles:
     - {role: common, tags: "common"}
     - {role: nginx, tags: "nginx"}
     - {role: odoo, tags: "odoo"}
