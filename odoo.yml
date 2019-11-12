@@ -8,7 +8,7 @@
    - name: 'install python'
      raw: 'sudo apt-get -y install python'
 
-- ame: Odoo
+- name: Odoo
   hosts: all
   become: yes
   become_method: sudo
