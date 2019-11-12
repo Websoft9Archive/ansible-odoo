@@ -19,7 +19,7 @@
       
 - name: add Odoo Repository
   apt_repository:
-    repo: deb http://nightly.odoo.com/13.0/nightly/deb/ ./
+    repo: deb http://nightly.odoo.com/12.0/nightly/deb/ ./
     filename: odoo
 
 
