@@ -1,36 +1,56 @@
 # Odoo自动化安装与部署
 
-本项目是基于Ansible的[Odoo](https://www.odoo.com//) 自动化安装脚本，实现在Ansible上一键安装Odoo。本项目是开源项目，支持MIT开源协议。如果您不熟悉Ansible的使用，您可以直接使用我们在公有云上提供的镜像。
+本项目是由 [Websoft9](http://www.websoft9.com) 研发的 [Odoo](https://nightly.odoo.com/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 GitLab，让原本复杂的安装过程变得没有任何技术门槛。  
 
-## 操作系统
+本项目是开源项目，采用 LGPL3.0 开源协议。
 
-目前仅支持ubuntu 14.04/16.04/18.04
+## 配置要求
 
-## 服务器配置要求
+操作系统：目支持Ubuntu 14.04 及以上部署此脚本  
+硬件配置：最低2核4G，20G系统盘空间，否则无法运行
 
-最低2G内存，20G系统盘空间，否则无法安装
+## 组件
 
-## 版本
+包含的核心组件为：Odoo,Python,Nginx,PostgreSQL
 
-Odoo官方采用 APT 安装方式（Packaged installers），官方提供了最新版本的源地址，因此能够保证每次安装都是最新版本。[版本号查看](https://www.odoo.com/zh_CN/page/download)
+更多请见[参数表](/docs/zh/stack-components.md)
 
-Odoo的具体版本号采用大版本+日期的组织方式，例如：Odoo12-20190624
+## 本项目安装的是 Odoo 最新版吗？
+
+首先要了解 Odoo 的版本构成
+- 大版本：Odoo9, Odoo10, Odoo11, Odoo12, Odoo13
+- 小版本：Odoo12-20190624，小版本采用 **大版本+日期** 的组织方式
+
+由于 Odoo 官方采用 deb 包下载安装方式，Odoo 大版本的维护通过修改 [mainl.yml](/roles/odoo/tasks/main.yml) 文件中的 repo 值实现。（[如何查看 repo 的值？](https://nightly.odoo.com/)）。而小版本无需维护，Odoo 官方会维护大版本 deb 包中的小版本以保证其为最新。
+```
+- name: add Odoo Repository
+  apt_repository:
+    repo: deb http://nightly.odoo.com/13.0/nightly/deb/ ./
+    filename: odoo
+```
+
+我们尽量及时更新大版本的下载地址，以保证用户能够安装到最新版本的 Odoo
 
 
 ## 安装指南
 
-本Ansible脚本支持root用户、普通用户（+su权限提升）等两种账号模式，也支持密码和秘钥对登录方式。
+以 root 用户登录 Linux，运行下面的**命令脚本**即可启动自动化部署，然后耐心等待，直至安装成功。
 
-其中普通用户登录需要增加变量：
+```
+# coming soon
+```  
 
-~~~
-//假设普通用户的username为
-admin_username: websoft9
-~~~
+注意：  
 
-## 组件
-Odoo,Python,Nginx,PostgreSQL
+1. 如果以非 root 用户身份登录 Linux，请先通过 sudo 或 su 提升权限，再运行脚本。
+2. 由于自动化安装过程中有大量下载任务，若网络不通（或速度太慢）会引起下载失败，从而导致安装程序终止运行。此时，请重置服务器后再次尝试安装，若仍然无法完成，请使用我们在公有云上发布的 [Odoo 镜像](https://apps.websoft9.com/odoo) 的部署方式
 
-## 使用指南
 
-文档链接：http://en.websoft9.com/docs/odoo
+## 文档
+
+文档链接：https://support.websoft9.com/docs/odoo
+
+## FAQ
+
+- 命令脚本部署与镜像部署有什么区别？请参考[镜像部署-vs-脚本部署](https://support.websoft9.com/docs/faq/zh/bz-product.html#镜像部署-vs-脚本部署)
+- 本项目支持在 Ansible Tower 上运行吗？支持
