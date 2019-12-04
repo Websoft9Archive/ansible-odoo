@@ -18,6 +18,7 @@
 ## 本项目安装的是 Odoo 最新版吗？
 
 首先要了解 Odoo 的版本构成
+
 - 大版本：Odoo9, Odoo10, Odoo11, Odoo12, Odoo13
 - 小版本：Odoo12-20190624，小版本采用 **大版本+日期** 的组织方式
 
@@ -34,16 +35,21 @@
 
 ## 安装指南
 
-以 root 用户登录 Linux，运行下面的**命令脚本**即可启动自动化部署，然后耐心等待，直至安装成功。
+登录 Linux，运行下面的**命令脚本**即可启动自动化部署，然后耐心等待，直至安装成功。
 
 ```
-# coming soon
-```  
+#非 root 用户登录后，需先提升成为 root 权限
+sudo su -
+
+#自动化安装命令
+wget https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=odoo url=https://github.com/Websoft9/ansible-odoo.git init=0 ansible=y
+
+```
 
 注意：  
 
-1. 如果以非 root 用户身份登录 Linux，请先通过 sudo 或 su 提升权限，再运行脚本。
-2. 由于自动化安装过程中有大量下载任务，若网络不通（或速度太慢）会引起下载失败，从而导致安装程序终止运行。此时，请重置服务器后再次尝试安装，若仍然无法完成，请使用我们在公有云上发布的 [Odoo 镜像](https://apps.websoft9.com/odoo) 的部署方式
+1. 自动化脚本需服务器上已经安装 Python 2.7 或以上版本方可运行，一般操作系统会自带 Python。如果无法运行，系统会提示用户先安装 Python，再运行自动化安装命令。
+2. 由于自动化安装过程中有大量下载任务，若网络不通（或速度太慢）会引起下载失败，从而导致安装程序终止运行。此时，请重置服务器后再次尝试安装，若仍然无法完成，请使用我们在公有云上发布的 [BT 镜像](https://apps.websoft9.com/bt) 的部署方式
 
 
 ## 文档
