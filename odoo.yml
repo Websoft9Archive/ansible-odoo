@@ -15,6 +15,7 @@
   
   roles:
     - {role: common, tags: "common"}
+    - {role: cloud, tags: "cloud"}
     - {role: nginx, tags: "nginx"}
     - {role: odoo, tags: "odoo"}
     - {role: end, tags: "end"}
