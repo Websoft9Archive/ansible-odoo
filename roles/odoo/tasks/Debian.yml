@@ -19,7 +19,7 @@
   apt:
     name: odoo
     update_cache: yes
-    force_apt_get: True g
+    force_apt_get: True
 
 - name: Install wkhtmltox
   apt:
