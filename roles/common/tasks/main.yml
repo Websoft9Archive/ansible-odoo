@@ -17,18 +17,9 @@
 
   - name: Install Common Software
     yum: 
-      name: [mosh,yum-utils,wget,openssl,unzip,bzip2,expect,at,vim, screen,pwgen,git, htop, yum-cron,ImageMagick, goaccess,MySQL-python,python-pip,inotify-tools]
+      name: [mosh,yum-utils,wget,openssl,unzip,bzip2,expect,at,vim, screen,pwgen,git, htop, yum-cron,ImageMagick, goaccess,python-pip,inotify-tools,python-devel]
       state: installed
     
-  - name: Pip Update
-    pip:
-      name: pip
-      extra_args: --upgrade
-
-  - name: pip pexpect
-    pip:
-      name: pexpect
-
   - name: Configuration yum-cron
     copy: src=yum-cron.conf dest=/etc/yum/
 
@@ -49,7 +40,7 @@
 
   - name: Install Common Software
     apt: 
-      name: [mosh,curl,gnupg2,ca-certificates,lsb-release,wget,openssl,unzip,bzip2,expect,at,vim,screen,pwgen,git,htop,imagemagick,goaccess,python3-mysqldb,python-mysqldb,python-pip,python3-pip,unattended-upgrades,python3-pexpect,python-pexpect]
+      name: [mosh,curl,gnupg2,ca-certificates,lsb-release,wget,openssl,unzip,bzip2,expect,at,vim,screen,pwgen,git,htop,imagemagick,goaccess,python-pip,python3-pip,unattended-upgrades,python-dev,python3-dev]
       state: latest
       force_apt_get: True
       allow_unauthenticated: yes
@@ -58,6 +49,16 @@
     copy: src=20auto-upgrades dest=/etc/apt/apt.conf.d/
   
   when: ansible_distribution == 'Ubuntu'
+
+
+- name: Pip Update
+  pip:
+    name: pip
+    extra_args: --upgrade
+
+- name: pip requirements
+  pip:
+    name: [pexpect]
 
 - name: Set swapiness
   sysctl:

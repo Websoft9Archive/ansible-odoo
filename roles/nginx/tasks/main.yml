@@ -50,6 +50,10 @@
     state: restarted
     enabled: yes
 
+- set_fact:
+    webserver: nginx
+
+
 - name: Check Nginx Version
   shell: nginx -v
   register: nginx_ver

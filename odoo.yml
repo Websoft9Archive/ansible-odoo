@@ -12,6 +12,8 @@
   hosts: all
   become: yes
   become_method: sudo
+  vars_files:
+    - variables.yml
   
   roles:
     - {role: common, tags: "common"}

@@ -1,0 +1,15 @@
+- src: https://github.com/websoft9dev/role_common
+  version: master
+  name: common
+
+- src: https://github.com/websoft9dev/role_cloud
+  version: master
+  name: cloud
+
+- src: https://github.com/websoft9dev/role_nginx
+  version: master
+  name: nginx
+
+- src: https://github.com/websoft9dev/role_end
+  version: master
+  name: end
