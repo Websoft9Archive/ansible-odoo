@@ -2,8 +2,6 @@
 
 我们收集使用 Odoo 过程中最常见的故障，供您参考：
 
-## Odoo类
-
 #### 恢复数据库、上传附件等操作，出现 “413 Request Entity Too Large” 错误？
 
 这是由于 Nginx 默认安装下，上传文件最大为 1M，因此需要修改 Nginx 这个限制：
@@ -18,6 +16,12 @@
     ...
    ```
 4. 保存并[重启 Nginx 服务](/zh/admin-services.md#nginx)
+
+#### 访问Odoo总是出现数据库提醒？
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-setpasswodrem-websoft9.png)
+
+这个提醒的是要求你尽快给数据库设置一个高强度的管理员密码，如果不设置将面临很大的风险。一旦设置后，此界面就不会再弹出了
 
 #### 无法通过 SFTP 上传文件到Odoo程序目录问题
 
@@ -40,8 +44,6 @@ Odoo11之前的版本，在使用Odoo打印功能时，下载的PDF文件只有�
 sudo apt-get install ttf-wqy-zenhei
 sudo apt-get install ttf-wqy-microhei
 ~~~
-
-## 数据库类
 
 #### 数据库服务无法启动
 
