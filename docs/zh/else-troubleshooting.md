@@ -19,7 +19,7 @@
    ```
 4. 保存并[重启 Nginx 服务](/zh/admin-services.md#nginx)
 
-#### 访问Odoo总是出现数据库提醒？
+#### 访问Odoo总是出现数据库设置提醒？
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-setpasswodrem-websoft9.png)
 
