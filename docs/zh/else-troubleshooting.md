@@ -1,6 +1,8 @@
 # 故障处理
 
-我们收集使用 Odoo 过程中最常见的故障，供您参考：
+此处收集使用 Odoo 过程中最常见的故障，供您参考
+
+> 大部分故障与云平台密切相关，如果你可以确认故障的原因是云平台造成的，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
 
 #### 恢复数据库、上传附件等操作，出现 “413 Request Entity Too Large” 错误？
 
