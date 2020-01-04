@@ -59,6 +59,3 @@ df -lh
 # 查看内存使用
 free -lh
 ```
-## 服务器类
-
-服务器相关故障的诊断和解决，与云平台密切相关，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
