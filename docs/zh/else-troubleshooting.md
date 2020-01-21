@@ -47,6 +47,11 @@ sudo apt-get install ttf-wqy-zenhei
 sudo apt-get install ttf-wqy-microhei
 ~~~
 
+#### Odoo 备份出现 Command pg_dump not found
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-backuperror-websoft9.png)
+原因：PostgreSQL的备份命令没有找到
+解决方案：需要进一步查看PostgreSQL安装问题，还是Odoo本身的问题
+
 #### 数据库服务无法启动
 
 数据库服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
