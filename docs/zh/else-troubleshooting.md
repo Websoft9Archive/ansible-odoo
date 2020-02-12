@@ -4,6 +4,10 @@
 
 > 大部分故障与云平台密切相关，如果你可以确认故障的原因是云平台造成的，请参考[云平台文档](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
 
+#### 如何查看错误日志？
+
+最简单的方式是通过SSH连接服务器，运行`odoo`这个命令，就会显示错误日志以及Odoo的运行情况
+
 #### 恢复数据库、上传附件等操作，出现 “413 Request Entity Too Large” 错误？
 
 这是由于 Nginx 默认安装下，上传文件最大为 1M，因此需要修改 Nginx 这个限制：
