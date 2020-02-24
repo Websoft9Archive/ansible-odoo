@@ -17,8 +17,9 @@
     - variables.yml
   
   roles:
-    - {role: common, tags: "common"}
-    - {role: cloud, tags: "cloud"}
-    - {role: nginx, tags: "nginx"}
-    - {role: odoo, tags: "odoo"}
-    - {role: end, tags: "end"}
+    - {role: role_common, tags: "role_common"}
+    - {role: role_cloud, tags: "role_cloud"}
+    - {role: role_nginx, tags: "role_nginx"}
+    - {role: role_odoo, tags: "role_odoo"}
+    - {role: role_preend, tags: "role_preend"}
+    - {role: role_end, tags: "role_end"}
