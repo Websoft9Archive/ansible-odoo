@@ -6,8 +6,14 @@
 
 ## 配置要求
 
-操作系统：目支持Ubuntu 14.04 及以上部署此脚本  
-硬件配置：最低2核4G，20G系统盘空间，否则无法运行
+安装本项目，确保符合如下的条件：
+
+| 条件       | 详情       | 备注  |
+| ------------ | ------------ | ----- |
+| 操作系统       | Ubuntu18.04       |   |
+| 公有云| AWS, Azure, 阿里云, 华为云, 腾讯云 | 可选 |
+| 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
+| 服务器配置 | 最低2核4G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
 
 ## 组件
 
@@ -22,12 +28,9 @@
 - 大版本：Odoo9, Odoo10, Odoo11, Odoo12, Odoo13
 - 小版本：Odoo12-20190624，小版本采用 **大版本+日期** 的组织方式
 
-由于 Odoo 官方采用 deb 包下载安装方式，Odoo 大版本的维护通过修改 [mainl.yml](/roles/odoo/tasks/main.yml) 文件中的 repo 值实现。（[如何查看 repo 的值？](https://nightly.odoo.com/)）。而小版本无需维护，Odoo 官方会维护大版本 deb 包中的小版本以保证其为最新。
+由于 Odoo 官方采用 deb 包下载安装方式，Odoo 大版本的维护通过修改 [mainl.yml](/roles/odoo/defaults/main.yml) 文件中的 odoo_repo_url 值实现。（[如何查看 repo 的值？](https://nightly.odoo.com/)）。而小版本无需维护，Odoo 官方会维护大版本 deb 包中的小版本以保证其为最新。
 ```
-- name: add Odoo Repository
-  apt_repository:
-    repo: deb http://nightly.odoo.com/13.0/nightly/deb/ ./
-    filename: odoo
+odoo_repo_url: http://nightly.odoo.com/13.0/nightly/deb/
 ```
 
 我们尽量及时更新大版本的下载地址，以保证用户能够安装到最新版本的 Odoo
@@ -35,26 +38,25 @@
 
 ## 安装指南
 
-登录 Linux，运行下面的**命令脚本**即可启动自动化部署，然后耐心等待，直至安装成功。
+以 root 用户登录 Linux，运行下面的**一键自动化安装命令**即可启动自动化部署。若没有 root 用户，请以其他用户登录 Linux 后运行 `sudo su -` 命令提升为 root 权限，然后再运行下面的脚本。
 
 ```
-#非 root 用户登录后，需先提升成为 root 权限
-sudo su -
-
-#自动化安装命令
-wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=odoo url=https://github.com/Websoft9/ansible-odoo.git init=0 ansible=y
-
+wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.sh ; bash install.sh repository=odoo
 ```
 
-注意：  
+脚本后启动，就开始了自动化安装，必要时需要用户做出交互式选择，然后耐心等待直至安装成功。
 
-1. 自动化脚本需服务器上已经安装 Python 2.7 或以上版本方可运行，一般操作系统会自带 Python。如果无法运行，系统会提示用户先安装 Python，再运行自动化安装命令。
-2. 由于自动化安装过程中有大量下载任务，若网络不通（或速度太慢）会引起下载失败，从而导致安装程序终止运行。此时，请重置服务器后再次尝试安装，若仍然无法完成，请使用我们在公有云上发布的 [BT 镜像](https://apps.websoft9.com/bt) 的部署方式
+**安装中的注意事项：**  
+
+1. 操作不慎或网络发生变化，可能会导致SSH连接被中断，安装就会失败，此时请重新安装
+2. 安装缓慢、停滞不前或无故中断，主要是网络不通（或网速太慢）导致的下载问题，此时请重新安装
+
+多种原因导致无法顺利安装，请使用我们在公有云上发布的 [Odoo镜像](https://apps.websoft9.com/odoo) 的部署方式
 
 
 ## 文档
 
-文档链接：https://support.websoft9.com/docs/odoo
+文档链接：https://support.websoft9.com/docs/odoo/zh
 
 ## FAQ
 

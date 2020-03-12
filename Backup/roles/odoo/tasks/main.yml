@@ -1,0 +1,4 @@
+- debug:
+    msg: Odoo will be installed on {{ ansible_distribution }} 
+
+- include: "{{ansible_os_family}}.yml"
