@@ -6,6 +6,12 @@
 
 - src: https://github.com/websoft9dev/role_nginx
   version: master
+
+- src: https://github.com/websoft9dev/role_postgresql
+  version: master
+
+- src: https://github.com/websoft9dev/role_wkhtmltopdf
+  version: master
   
 - src: https://github.com/websoft9dev/role_preend
   version: master
