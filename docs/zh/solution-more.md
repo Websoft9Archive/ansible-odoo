@@ -20,6 +20,9 @@ Odoo 域名绑定操作步骤：
    ```
 3. 保存配置文件，[重启Nginx服务](/zh/admin-services.md#nginx)
 
+## 如何开启PostgreSQL的远程连接并启用账号？
+
+待研究
 
 ## Odoo CLI
 
