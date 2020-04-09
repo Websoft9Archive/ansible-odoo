@@ -20,7 +20,9 @@ Odoo 域名绑定操作步骤：
    ```
 3. 保存配置文件，[重启Nginx服务](/zh/admin-services.md#nginx)
 
-## 如何开启PostgreSQL的远程连接并启用账号？
+## 开启PostgreSQL远程连接
+
+Odoo默认安装的PostgreSQL并不会启用数据库账号，也不会开启远程连接。如果需要通过本地的Navicat等客户端连接数据库，主要操作如下：
 
 待研究
 
