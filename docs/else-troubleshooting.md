@@ -1,8 +1,9 @@
 # Troubleshooting
 
-We collect the most common troubleshooting of using Odoo for your reference:
+We collect the most common troubleshooting of using Couchbase for your reference:
 
-## Odoo related
+> Instance troubleshooting is closely related to the Instance provider that is Cloud Platform, refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html)
+
 
 #### Nginx “413 Request Entity Too Large” error?
 
@@ -38,9 +39,6 @@ sudo apt-get install ttf-wqy-zenhei
 sudo apt-get install ttf-wqy-microhei
 ~~~
 
-
-## Database related
-
 #### Database service could not be started?
 
 Insufficient disk space, insufficient memory, and configuration file errors can make database service could not be started  
@@ -57,7 +55,3 @@ df -lh
 # view memory rate
 free -lh
 ```
-## Server related
-
-Cloud Server troubleshooting is closely related to the Instance provider that is Cloud Platform   
-Please refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html)
