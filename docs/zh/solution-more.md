@@ -24,7 +24,7 @@ Odoo 域名绑定操作步骤：
 
 Odoo默认安装的PostgreSQL并不会启用数据库账号，也不会开启远程连接。如果需要通过本地的Navicat等客户端连接数据库，主要操作如下：
 
-待研究
+官方解决方案：https://www.odoo.com/documentation/13.0/setup/deploy.html#postgresql
 
 ## Odoo CLI
 
