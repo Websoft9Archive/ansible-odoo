@@ -1,6 +1,6 @@
-#- name: check_odoo_version
-#  debug:
-#    var: check_odoo_version.stderr
+- name: check_odoo_version
+  debug:
+    var: check_odoo_version.stderr
     
 - name: check_odoo_service
   debug:
