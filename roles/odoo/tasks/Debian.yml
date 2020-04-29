@@ -19,38 +19,3 @@
     name: odoo
     update_cache: yes
     force_apt_get: True
-
-- name: Install wkhtmltox
-  apt:
-    deb: "{{wkhtmltox_deb_url}}"
-
-- name: copy  wkhtmltox
-  command: cp /usr/local/bin/wkhtmltopdf /usr/bin/
-
-- name: Config Odoo
-  copy:
-    src: odoo.conf
-    dest: /etc/odoo/
-
-- name: Config Nginx
-  copy:
-    src: default
-    dest: /etc/nginx/conf.d/default.conf
-
-- name: Started Odoo
-  service:
-    name: odoo
-    state: restarted
-    enabled: yes
-
-- name: Started Nginx
-  service:
-    name: nginx
-    state: restarted
-    enabled: yes
-
-- name: Started PostgreSQL
-  service:
-    name: postgresql
-    state: started
-    enabled: yes

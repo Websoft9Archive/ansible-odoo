@@ -12,5 +12,6 @@
     - {role: role_cloud, tags: "role_cloud"}
     - {role: role_nginx, tags: "role_nginx"}
     - {role: odoo, tags: "odoo"}
+    - {role: role_wkhtmltopdf, tags: "role_wkhtmltopdf"}
     - {role: role_preend, tags: "role_preend"}
     - {role: role_end, tags: "role_end"}

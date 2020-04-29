@@ -1,4 +1,41 @@
+# install Odoo
 - debug:
     msg: Odoo will be installed on {{ ansible_distribution }} 
 
 - include: "{{ansible_os_family}}.yml"
+
+# configure Odoo
+- name: Config Odoo
+  copy:
+    src: odoo.conf
+    dest: /etc/odoo/
+
+- name: Started Odoo
+  service:
+    name: odoo
+    state: restarted
+    enabled: yes
+
+- name: Started PostgreSQL
+  service:
+    name: postgresql
+    state: started
+    enabled: yes
+
+# set soft link
+- name: set soft link
+  shell: |
+    ln -s /usr/lib/python3/dist-packages/odoo  /data/wwwroot/odoo
+    ln -s /etc/odoo/odoo.conf /data/config/odoo
+    ln -s /var/log/odoo /data/logs/odoo
+
+# display version and service state of components
+- name: Get odoo version
+  shell: odoo -v
+  register: check_odoo_version
+  notify: check_odoo_version
+
+- name: Check odoo Service
+  shell: systemctl status odoo | grep Active*
+  register: check_odoo_service
+  notify: check_odoo_service
