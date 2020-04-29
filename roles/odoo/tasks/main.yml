@@ -22,12 +22,12 @@
     state: started
     enabled: yes
 
-# set soft link
+# set soft link, -b over
 - name: set soft link
   shell: |
-    ln -s /usr/lib/python3/dist-packages/odoo  /data/wwwroot/odoo
-    ln -s /etc/odoo/odoo.conf /data/config/odoo
-    ln -s /var/log/odoo /data/logs/odoo
+    ln -sb /usr/lib/python3/dist-packages/odoo  /data/wwwroot/odoo
+    ln -sb /etc/odoo/odoo.conf /data/config/odoo
+    ln -sb /var/log/odoo /data/logs/odoo
 
 # display version and service state of components
 - name: Get odoo version
