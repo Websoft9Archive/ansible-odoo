@@ -31,7 +31,7 @@
 
 # display version and service state of components
 - name: Get odoo version
-  shell: odoo -v
+  shell: odoo --version
   register: check_odoo_version
   notify: check_odoo_version
 
