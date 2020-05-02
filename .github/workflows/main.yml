@@ -29,4 +29,4 @@ jobs:
         source_dir: docs/html
         container_name: $web
         connection_string: ${{ secrets.Azure_blob }}
-        extra_args: '--destination-path *docs*'
+        extra_args: '--destination-path docs'
