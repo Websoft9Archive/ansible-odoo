@@ -1,7 +1,3 @@
-- name: check_odoo_version
-  debug:
-    var: check_odoo_version.stdout
-    
 - name: check_odoo_service
   debug:
     var: check_odoo_service.stdout
