@@ -31,9 +31,7 @@
 
 # display version and service state of components
 - name: Get odoo version
-  shell: odoo --version >> odoo_version.txt; cat odoo_version.txt
-  register: check_odoo_version
-  notify: check_odoo_version
+  shell: sudo sh -c "odoo --version 2>> /data/logs/install_version.txt"
 
 - name: Check odoo Service
   shell: systemctl status odoo | grep Active*
