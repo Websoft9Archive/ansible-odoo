@@ -15,6 +15,8 @@
 | 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
 | 服务器配置 | 最低1核2G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
 
+详细的配置要求参考官方相关[文档](https://www.odoo.com/zh_CN/forum/help-1/question/server-requirements-121217)
+
 ## 组件
 
 包含的核心组件为：Odoo,Python,Nginx,PostgreSQL
