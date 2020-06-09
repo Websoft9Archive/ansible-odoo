@@ -8,15 +8,11 @@
  
 - name: Install System Required
   shell: yum -y install gcc nodejs-less libxslt-devel bzip2-devel openldap-devel libjpeg-devel freetype-devel sassc
-  
-- name: add Odoo key
-  apt_key:
-    url: https://nightly.odoo.com/odoo.key
-      
+       
 - name: add Odoo Repository
-  apt_repository:
-    repo: deb "http://nightly.odoo.com/{{odoo_version}}/nightly/deb/" ./
-    filename: odoo
+  get_url:
+    url: https://nightly.odoo.com/{{odoo_version}}/nightly/rpm/odoo.repo
+    dest: /etc/yum.repos.d
 
 - name: Install Odoo
   apt:
