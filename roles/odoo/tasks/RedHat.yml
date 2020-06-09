@@ -5,13 +5,9 @@
   shell: |
     yum -y install centos-release-scl
     yum -y install rh-python36
-    yum -y install gcc nodejs-less libxslt-devel bzip2-devel openldap-devel libjpeg-devel freetype-devel
-
+ 
 - name: Install System Required
-  yum:
-    name: [postgresql]
-    update_cache: yes
-    force_apt_get: True
+  shell: yum -y install gcc nodejs-less libxslt-devel bzip2-devel openldap-devel libjpeg-devel freetype-devel sassc
   
 - name: add Odoo key
   apt_key:
