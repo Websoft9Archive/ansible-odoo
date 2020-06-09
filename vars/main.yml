@@ -5,6 +5,8 @@ postgresql_version: "11"
 
 docker_applications: 
   - phppgadmin
+
+postgresql_remote: False
   
 init_db: 
   postgresql:
