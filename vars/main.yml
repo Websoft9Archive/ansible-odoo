@@ -1,2 +1,7 @@
 preend_certbot: True
 nginx_reverse_proxy_port: "8069"
+
+postgresql_version: "11"
+
+docker_applications: 
+  - phppgadmin

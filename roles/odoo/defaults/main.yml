@@ -1,2 +1,7 @@
+# Odoo version: 9.0 | 10.0 | 11.0 | 12.0 | 13.0
+# odoo repo for Debian: http://nightly.odoo.com/13.0/nightly/deb/
+# odoo repo for RedHat: http://nightly.odoo.com/13.0/nightly/rpm/
+
+odoo_version: "13.0"
+
 wkhtmltox_deb_url: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.{{ansible_lsb.codename}}_amd64.deb
-odoo_repo_url: http://nightly.odoo.com/13.0/nightly/deb/

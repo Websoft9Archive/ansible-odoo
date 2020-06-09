@@ -1,1 +1,29 @@
-# Odoo only provide the Fedora distribution installation solution
+# CentOS does not have the minimum Python requirements (3.5) for Odoo
+# 添加Software Collections (SCL) 安装 Python
+
+- name: Install Python3.5 for CentOS 
+  shell: |
+    yum -y install centos-release-scl
+    yum -y install rh-python36
+    yum -y install gcc nodejs-less libxslt-devel bzip2-devel openldap-devel libjpeg-devel freetype-devel
+
+- name: Install System Required
+  yum:
+    name: [postgresql]
+    update_cache: yes
+    force_apt_get: True
+  
+- name: add Odoo key
+  apt_key:
+    url: https://nightly.odoo.com/odoo.key
+      
+- name: add Odoo Repository
+  apt_repository:
+    repo: deb "http://nightly.odoo.com/{{odoo_version}}/nightly/deb/" ./
+    filename: odoo
+
+- name: Install Odoo
+  apt:
+    name: odoo
+    update_cache: yes
+    force_apt_get: True

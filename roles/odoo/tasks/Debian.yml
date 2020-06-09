@@ -1,17 +1,10 @@
-
-- name: Install System Required
-  apt:
-    name: [postgresql,ttf-wqy-zenhei,ttf-wqy-microhei,htop,git]
-    update_cache: yes
-    force_apt_get: True   
-  
 - name: add Odoo key
   apt_key:
     url: https://nightly.odoo.com/odoo.key
       
 - name: add Odoo Repository
   apt_repository:
-    repo: deb "{{odoo_repo_url}}" ./
+    repo: deb "http://nightly.odoo.com/{{odoo_version}}/nightly/deb/" ./
     filename: odoo
 
 - name: Install Odoo

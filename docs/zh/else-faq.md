@@ -69,3 +69,7 @@ find /data/wwwroot/ -type f -exec chmod 640 {} \;
 *   珠海市信莱德软件开发有限公司 http://www.zhsunlight.cn/
 *   成都欧督系统科技有限公司 http://www.odoostart.com/
 *   山西清水欧度信息技术有限公司  http://www.odooqs.com (54773801@qq.com)
+
+#### 有什么好的Odoo学习资源？
+
+* Odoo爱好者博客：https://alanhou.org/category/odoo/

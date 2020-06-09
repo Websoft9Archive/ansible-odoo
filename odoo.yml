@@ -7,11 +7,35 @@
   vars_files:
     - vars/main.yml
   
+  vars_prompt:
+    - name: 'odoo_selection'
+      prompt: "Choose the Odoo distribution \n
+      1: Odoo9\n
+      2: Odoo10\n
+      3: Odoo11\n
+      4: Odoo12\n
+      5: Odoo13\n"
+      private: no
+      default: 5
+
+  vars:
+    odoo_select:
+      '1': "9.0"
+      '2': "10.0"
+      '3': "11.0"
+      '4': "12.0"
+      '5': "13.0"
+
+    odoo_version: "{{odoo_select[odoo_selection]}}"
+  
   roles:
     - {role: role_common, tags: "role_common"}
     - {role: role_cloud, tags: "role_cloud"}
+    - {role: role_postgresql, tags: "role_postgresql"}
     - {role: role_nginx, tags: "role_nginx"}
     - {role: odoo, tags: "odoo"}
     - {role: role_wkhtmltopdf, tags: "role_wkhtmltopdf"}
+    - {role: role_docker, tags: "role_docker"}
+    - {role: role_init_password, tags: "role_init_password"}
     - {role: role_preend, tags: "role_preend"}
     - {role: role_end, tags: "role_end"}
