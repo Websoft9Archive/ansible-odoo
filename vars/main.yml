@@ -2,7 +2,9 @@ preend_certbot: True
 nginx_reverse_proxy_port: "8069"
 
 postgresql_version: "11"
-postgresql_remote: True
+
+# for security reason, remote connection is disabled by default
+#postgresql_remote: True
 
 docker_applications: 
   - phppgadmin
