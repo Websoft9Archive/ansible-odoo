@@ -33,7 +33,7 @@
 
 首先要了解 Odoo 的版本构成
 
-- 大版本：Odoo9, Odoo10, Odoo11, Odoo12, Odoo13
+- 大版本：Odoo10, Odoo11, Odoo12, Odoo13
 - 小版本：Odoo12-20190624，小版本采用 **大版本+日期** 的组织方式
 
 由于 Odoo 官方采用 deb 包下载安装方式，Odoo 大版本的维护通过修改 [mainl.yml](/roles/odoo/defaults/main.yml) 文件中的 odoo_repo_url 值实现。（[如何查看 repo 的值？](https://nightly.odoo.com/)）。而小版本无需维护，Odoo 官方会维护大版本 deb 包中的小版本以保证其为最新。
