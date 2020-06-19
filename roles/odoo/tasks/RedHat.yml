@@ -1,5 +1,6 @@
 # CentOS does not have the minimum Python requirements (3.5) for Odoo
 # 添加Software Collections (SCL) 安装 Python
+# This playbook can not run now
 
 - name: Install Python3.5 for CentOS 
   shell: |
