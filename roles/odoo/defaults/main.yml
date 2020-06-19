@@ -4,4 +4,7 @@
 
 odoo_version: "13.0"
 
+# ce or ee
+odoo_distribution: "ce"
+
 wkhtmltox_deb_url: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.{{ansible_lsb.codename}}_amd64.deb
