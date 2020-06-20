@@ -1,14 +1,24 @@
-- name: add Odoo key
-  apt_key:
-    url: https://nightly.odoo.com/odoo.key
-      
-- name: add Odoo Repository
-  apt_repository:
-    repo: deb "http://nightly.odoo.com/{{odoo_version}}/nightly/deb/" ./
-    filename: odoo
+- block: 
+  - name: add Odoo key
+    apt_key:
+      url: https://nightly.odoo.com/odoo.key
 
-- name: Install Odoo
-  apt:
-    name: odoo
-    update_cache: yes
-    force_apt_get: True
+  - name: add Odoo Repository
+    apt_repository:
+      repo: deb "http://nightly.odoo.com/{{odoo_version}}/nightly/deb/" ./
+      filename: odoo
+
+  - name: Install Odoo
+    apt:
+      name: odoo
+      update_cache: yes
+      force_apt_get: True
+      
+  when: odoo_distribution == "ce"
+  
+- block:
+  - name: Install a .deb package from the internet.
+    apt:
+      deb: https://libs.websoft9.com/apps/Odoo/odoo_13.0_e_latest_all.deb
+      autoclean: yes
+    when: odoo_distribution == "ee"
