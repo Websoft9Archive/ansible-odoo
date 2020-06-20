@@ -31,7 +31,7 @@
       '3': "12.0"
       '4': "13.0"
       
-    odoo_version_distribution:
+    odoo_distribution_select:
       '1': "ce"
       '2': "ee"
 
