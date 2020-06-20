@@ -8,23 +8,35 @@
     - vars/main.yml
   
   vars_prompt:
-    - name: 'odoo_selection'
-      prompt: "Choose the Odoo distribution \n
+    - name: 'odoo_version_selection'
+      prompt: "Choose the Odoo version \n
       1: Odoo10\n
       2: Odoo11\n
       3: Odoo12\n
       4: Odoo13\n"
       private: no
       default: 5
+      
+    - name: 'odoo_distribution_selection'
+      prompt: "Choose the Odoo distribution \n
+      1: Community Edition\n
+      2: Enterprise Edition\n"
+      private: no
+      default: 1
 
   vars:
-    odoo_select:
+    odoo_version_select:
       '1': "10.0"
       '2': "11.0"
       '3': "12.0"
       '4': "13.0"
+      
+    odoo_version_distribution:
+      '1': "ce"
+      '2': "ee"
 
-    odoo_version: "{{odoo_select[odoo_selection]}}"
+    odoo_version: "{{odoo_version_select[odoo_version_selection]}}"
+    odoo_distribution: "{{odoo_distribution_select[odoo_distribution_selection]}}"
   
   roles:
     - {role: role_common, tags: "role_common"}
