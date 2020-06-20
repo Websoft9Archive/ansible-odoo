@@ -1,6 +1,8 @@
 preend_certbot: True
 nginx_reverse_proxy_port: "8069"
 
+common_os_support: ["Ubuntu"]
+
 postgresql_version: "11"
 
 # for security reason, remote connection is disabled by default
