@@ -15,17 +15,3 @@
     get_url:
       url: https://nightly.odoo.com/{{odoo_version}}/nightly/rpm/odoo.repo
       dest: /etc/yum.repos.d
-
-  - name: Install Odoo
-    apt:
-      name: odoo
-      update_cache: yes
-      force_apt_get: True
-  when: odoo_distribution == "ce"
-  
-- block:
-  - name: Install a .deb package from the internet.
-    apt:
-      deb: https://libs.websoft9.com/apps/Odoo/odoo_13.0_e_latest_all.deb
-      autoclean: yes
-    when: odoo_distribution == "ee"
