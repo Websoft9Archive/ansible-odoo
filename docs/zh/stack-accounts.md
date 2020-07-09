@@ -26,6 +26,7 @@ Odoo 采用 [Peer Authentication](https://www.postgresql.org/docs/10/auth-method
    | --- | --- | --- |
    |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](https://support.websoft9.com/docs/azure/zh/server-login.html#示例2：启用系统root账号) |
    |  AWS Centos 系统   |  centos   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号) |
+   |  AWS AmazonLinux 系统   |  ec2-user   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号) |
    |  AWS Ubuntu 系统  |  ubuntu   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号)  |
    |  阿里云，华为云，腾讯云   |  root   | |
 

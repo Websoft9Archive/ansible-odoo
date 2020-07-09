@@ -10,7 +10,7 @@
   vars_prompt:
     - name: 'odoo_version_selection'
       prompt: "Choose the Odoo version \n
-      1: Odoo10\n
+      1: Odoo10 (only community edition)\n
       2: Odoo11\n
       3: Odoo12\n
       4: Odoo13\n"

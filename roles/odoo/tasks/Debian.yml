@@ -15,10 +15,32 @@
       force_apt_get: True
       
   when: odoo_distribution == "ce"
-  
+
+
 - block:
+  - pause:
+      prompt: "Give your secret code for Odoo ee download ( It's in the file /root/job/secret_code on image build Server)"
+    register: prompt
+    no_log: yes
+    run_once: yes
+
   - name: Install a .deb package from the internet.
     apt:
-      deb: https://libs.websoft9.com/apps/Odoo/odoo_13.0_e_latest_all.deb
+      deb: "https://libs.websoft9.com/apps/Odoo/{{ prompt.user_input | b64encode }}/odoo_{{odoo_version}}_e_latest_all.deb"
       autoclean: yes
-    when: odoo_distribution == "ee"
+
+  - name: Copy odoo.html to server
+    copy:
+      src: odoo.html
+      dest: /data/wwwroot
+      owner: nginx
+      group: nginx
+      mode: '0640'
+
+  - name: Copy new default and backup old default
+    copy:
+      src: default
+      dest: /etc/nginx/conf.d/default.conf
+      backup: yes
+  
+  when: odoo_distribution == "ee"

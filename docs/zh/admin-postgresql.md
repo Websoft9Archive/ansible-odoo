@@ -1,6 +1,8 @@
 # PostgreSQL
 
-Odoo 预装包中内置 PosgreSQL 及可视化数据库管理功能 ，使用请参考如下步骤：
+## Odoo 中管理数据库
+
+Odoo 预装包中内置 PostgreSQL 及可视化数据库管理功能 ，使用请参考如下步骤：
 
 1. 在 Odoo 登录界面点击【Manage Database】链接  
 ![Odoo manage database](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-loginpage-websoft9.png)
@@ -14,7 +16,7 @@ Odoo 预装包中内置 PosgreSQL 及可视化数据库管理功能 ，使用请
 3. 选择操作项，管理数据库
 ![Odoo set a password](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-manages-websoft9.png)
 
-## 新增
+### 新增
 
 Odoo 支持多租户（多企业组织），增加一个数据库就等于增加一个企业。多个企业共同使用一套 Odoo，采用不同的账号登录，相互不干扰。
 
@@ -22,14 +24,14 @@ Odoo 支持多租户（多企业组织），增加一个数据库就等于增加
    ![Odoo 新增数据库](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidb-websoft9.png)
 2. 新增完成后，你会看到数据库管理界面列出新增的数据库
 
-## 备份
+### 备份
 
 1. 输入密码，选择备份格式，点击【Backup】
    ![Odoo 备份](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-managesbk-websoft9.png)
 
 2. 备份完成后，系统会自动下载备份数据（zip文件）
 
-## 复制
+### 复制
 
 可以完整复制一个企业组织，作为新企业组织的数据
 
@@ -38,11 +40,11 @@ Odoo 支持多租户（多企业组织），增加一个数据库就等于增加
 
 2. 复制成功后，数据库管理栏目会列出新复制的数据库
 
-## 删除
+### 删除
 
 请谨慎操作
 
-## 恢复
+### 恢复
 
 数据库被删除后，可以通过备份进行恢复
 
@@ -51,9 +53,20 @@ Odoo 支持多租户（多企业组织），增加一个数据库就等于增加
 
 2. 数据库恢复过程中可能会出现"413 Request Entity Too Large"，[解决办法](/zh/else-troubleshooting.md#odoo类)
 
-## 修改主密码
+### 修改主密码
 
 只可以修改主密码，如果忘记了主密码，重置密码方案待研究
+
+## Web GUI 工具管理数据库
+
+Canvas 预装包中内置 PostgreSQL 及可视化数据库管理工具 `phpPgAdmin` ，使用请参考如下步骤：
+
+1. 登录云控制台，[开启服务器安全组9090端口](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
+2. 本地浏览器 Chrome 或 Firefox 访问：*http://服务器公网IP:9090*，进入phpPgAdmin
+  ![登录phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/pgadmin.png)
+3. 输入数据库用户名和密码([不知道密码？](/zh/stack-accounts.md))
+4. 开始管理数据库
+  ![phpMyadmin](https://libs.websoft9.com/Websoft9/DocsPicture/zh/postgresql/phppgadmin-gui-websoft9.png)
 
 ## 更多
 

@@ -11,26 +11,35 @@
 ## Odoo 安装向导
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 进入初始化页面
-![Odoo初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-startcreatedb-websoft9.png)
+   
+   * 社区版
+
+   ![Odoo 社区版初始化页面](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-startcreatedb-websoft9.png)
+
+   * 企业版
+   
+   部署 Odoo 企业版后，需要根据镜像的引导页面向 Odoo 官方人员获取试用授权，便可以免费试用一个月。获取授权后，试用 SSH 登录云服务器，运行如下脚本解锁企业版
+   ```
+   bash /etc/odoo/ee_init.sh
+   ```
 
 2. 填写好所有参数，点击【create database】按钮，开始初始化安装。
    > 其中 Email 和 Password 是登录账号密码，务必牢记之
 
 3. 初始化安装完成后，登录后台，安装所需的 APP
-![Odoo APPS](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-consoleui-websoft9.png)
+  ![Odoo APPS](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-consoleui-websoft9.png)
 
 4. 注销登录，在登录界面点击【Manage Database】链接  
-![Odoo manage database](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-loginpage-websoft9.png)
+  ![Odoo manage database](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-loginpage-websoft9.png)
 
 5. 点击【set a master password】给数据库设置一个主密码保护数据库（非常重要）
-![Odoo set a pssword](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setmasterpw-websoft9.png)
+  ![Odoo set a pssword](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-setmasterpw-websoft9.png)
 
 6. Odoo 支持多租户（多企业组织），点击【create database】，可以再增加一个企业组织
-![Odoo 新增数据库](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidb-websoft9.png)
+  ![Odoo 新增数据库](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidb-websoft9.png)
 
 7. 回到登录界面，发现会多一个 database 选项
-![Odoo 重新登录](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidblogin-websoft9.png)
-
+  ![Odoo 重新登录](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-multidblogin-websoft9.png)
 
 
 > 需要了解更多Odoo的使用，请参考官方文档：[Odoo Documentation](https://www.odoo.com/documentation/master/index.html)

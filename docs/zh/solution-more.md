@@ -237,3 +237,13 @@ Options:
 ```
 
 更多详细情况，请参考官方文档：[Command-line interface: odoo-bin](https://www.odoo.com/documentation/13.0/reference/cmdline.html)
+
+## 企业版
+
+部署 Odoo 企业版后，需要根据镜像的引导页面向 Odoo 官方人员获取试用授权，便可以免费试用一个月。
+
+获取授权后，试用 SSH 登录云服务器，运行如下脚本解锁企业版
+
+```
+bash /etc/odoo/ee_init.sh
+```
