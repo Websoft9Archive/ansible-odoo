@@ -38,7 +38,7 @@
       mode: '0640'
 
   - name: Copy new default and backup old default
-    copy:
+    template:
       src: default
       dest: /etc/nginx/conf.d/default.conf
       backup: yes
