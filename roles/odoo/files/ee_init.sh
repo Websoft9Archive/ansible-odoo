@@ -1,8 +1,8 @@
 #!/bin/bash
-
-read -p "Input your test key:" domain
+read -p "是否已经联系Odoo获取试用秘钥[ y/n ]:" getkkey
+if [ $getkkey = "n" ]; then echo -e "\n请通过浏览器访问 http://服务器公网IP 获取秘钥"&&exit; fi
 rm -rf /data/wwwroot/odoo.html
 rm -rf /etc/nginx/conf.d/default.conf
 mv /etc/nginx/conf.d/default*[@]* /etc/nginx/conf.d/default.conf &>> /dev/null
 systemctl restart nginx
-echo "Unlock Odoo enterprise successfully, please refresh and clear cach of your browser to visit Odoo again"
+echo -e "\n解锁成功！请清空浏览器[缓存]后，重新访问 Odoo"
