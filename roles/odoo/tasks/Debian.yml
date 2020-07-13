@@ -37,11 +37,11 @@
       group: nginx
       mode: '0640'
       
-  - name: Copy ee_init.sh to server
+  - name: Copy ee_init.sh to server and set X permission
     copy:
       src: ee_init.sh
       dest: /etc/odoo
-      mode: '0640'
+      mode: '0740'
 
   - name: Copy new default and backup old default
     template:
