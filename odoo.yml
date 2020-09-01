@@ -46,6 +46,6 @@
     - {role: odoo, tags: "odoo"}
     - {role: role_wkhtmltopdf, tags: "role_wkhtmltopdf"}
     - {role: role_docker, tags: "role_docker"}
-    - {role: role_initpassword, tags: "role_initpassword"}
+    - {role: role_init, tags: "role_init"}
     - {role: role_preend, tags: "role_preend"}
     - {role: role_end, tags: "role_end"}
