@@ -1,4 +1,7 @@
 nginx_certbot: True
+nginx_appname: "odoo"
+nginx_vhost_mode: "www"
+
 nginx_reverse_proxy_port: "8069"
 
 common_os_support: ["Ubuntu"]
