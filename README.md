@@ -61,6 +61,10 @@ wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/master/scripts/
 
 多种原因导致无法顺利安装，请使用我们在公有云上发布的 [Odoo镜像](https://apps.websoft9.com/odoo) 的部署方式
 
+## License
+
+[LGPL-3.0](/License.md), Additional Terms: It is not allowed to publish free or paid image based on this repository in any Cloud platform's Marketplace.
+Copyright (c) 2016-present, Websoft9
 
 ## 文档
 
