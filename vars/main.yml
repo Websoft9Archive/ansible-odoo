@@ -8,6 +8,8 @@ common_os_support: ["Ubuntu", "CentOS"]
 
 postgresql_version: "11"
 
+postgresql_password: "123456"
+
 # for security reason, remote connection is disabled by default
 #postgresql_remote: True
 
