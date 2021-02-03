@@ -14,9 +14,9 @@ postgresql_version: "11"
 docker_applications: 
   - phppgadmin
 
-postgresql_remote: False
+postgresql_remote: True
   
 init_db: 
   postgresql:
-    admin: root
+    admin: postgres
     password: "123456"
