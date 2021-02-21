@@ -54,7 +54,7 @@ Follow our [Odoo image](https://apps.websoft9.com/odoo) for installation on majo
 
 ## Documentation
 
-To get information about initial installation, default username and password, HTTPS, SMTP, Backup, Upgrade and more, please view **Graylog Administrator Guide** ([English](https://support.websoft9.com/docs/odoo) | [简体中文](https://support.websoft9.com/docs/odoo/zh))
+To get information about initial installation, default username and password, HTTPS, SMTP, Backup, Upgrade and more, please view **Odoo Administrator Guide** ([English](https://support.websoft9.com/docs/odoo) | [简体中文](https://support.websoft9.com/docs/odoo/zh))
 
 ## Changelog
 
