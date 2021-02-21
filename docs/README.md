@@ -12,7 +12,7 @@ Improvements for Odoo deployment:
 
 * Install htmltopdf and Chinese fonts which need for PDF form
 * Install pgAdmin on Docker for manage database by GUI
-* Install Nginx and Cerbot, enable HTTPS very easy 
+* Install Nginx and Certbot, enable HTTPS very easy 
 
 ## System Requirement
 
