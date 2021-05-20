@@ -21,7 +21,7 @@ jobs:
       env:
         CI: true
     
-    # upload to azure blob
+    #  to azure blob
     - name: debug
       run: ls
     - uses: bacongobbler/azure-blob-storage-upload@v1.0.0

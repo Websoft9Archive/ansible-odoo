@@ -14,7 +14,7 @@ postgresql_password: "123456"
 #postgresql_remote: True
 
 docker_applications: 
-  - phppgadmin
+  - pgadmin
 
 postgresql_remote: True
   
@@ -22,3 +22,12 @@ init_db:
   postgresql:
     admin: postgres
     password: "123456"
+
+init_docker:
+  pgadmin:
+    admin_username: user@domain.com
+    admin_password: "SuperSecret"
+    service_after: "docker.service"
+    compose_path: "/data/apps/pgadmin/docker-compose.yml"
+    compose_commands:
+      - sudo sed -i "s/SuperSecret/$new_password/g" /data/apps/pgadmin/docker-compose.yml
