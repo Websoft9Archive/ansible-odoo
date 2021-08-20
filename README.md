@@ -1,4 +1,4 @@
-# Odoo Cloud Installer
+# RabbitMQ Cloud Installer
 
 ![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
@@ -6,13 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**Odoo Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Odoo Community Edition](https://nightly.odoo.com/) based on Ansible and shell. It helps user install Odoo and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
-
-Improvements for Odoo deployment:
-
-* Install htmltopdf and Chinese fonts which need for PDF form
-* Install pgAdmin on Docker for manage database by GUI
-* Install Nginx and Certbot, enable HTTPS very easy 
+**RabbitMQ Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [RabbitMQ](https://www.odoo.com/) based on Ansible and shell. It helps user install RabbitMQ and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ## System Requirement
 
@@ -20,16 +14,16 @@ System Requirement to install this repository are as following：
 
 | Conditions       | Details                               | Notes                |
 | ------------------- | --------------------------------| -------------------- |
-| Operating System   | Ubuntu18.04, Ubuntu20.04| Optional                 |
+| Operating System   | Ubuntu20.04 | Optional                 |
 | Public Cloud     | AWS, Azure, Alibaba Cloud, HUAWEI ClOUD, Tencent Cloud    | Optional                 |
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
-| Server Configuration | vCPU no less than 2 core, Memory no less than  4 GIB, Storage no less than 40 GB, Bandwidth no less than 100M ||
+| Server Configuration | vCPU no less than 1 core, Memory no less than 2 GIB, Storage no less than 20 GB, Swap no less than 2GB |Bandwidth no less than 100M|
 
-To learn more information, please view [Server Requirements](https://www.odoo.com/zh_CN/forum/help-1/question/server-requirements-121217).
+To learn more information, please view [Installation & Configuration](https://www.odoo.com/zh_CN/forum/help-1/if-i-plan-for-100-users-what-are-some-suggestions-for-server-requirements-121217).
 
 ## Ecosystem
 
-Core components of this repository: Odoo, Python, Nginx, PostgreSQL, pgAdmin on docker
+Core components of this repository: Odoo,Python,Nginx,PostgreSQL
 
 Learn more about [Parameters](/docs/stack-components.md).
 
@@ -50,15 +44,11 @@ If the network is broken or blocked, SSH will be interrupted and the installatio
 
 #### Image on Cloud 
 
-Follow our [Odoo image](https://apps.websoft9.com/odoo) for installation on major Cloud Platform.
+Follow our [RabbitMQ image](https://apps.websoft9.com/odoo) for installation on major Cloud Platform.
 
 ## Documentation
 
-To get information about initial installation, default username and password, HTTPS, SMTP, Backup, Upgrade and more, please view **Odoo Administrator Guide** ([English](https://support.websoft9.com/docs/odoo) | [简体中文](https://support.websoft9.com/docs/odoo/zh))
-
-## Changelog
-
-Detailed changes are documented in the [CHANGELOG](/CHANGELOG.md).
+**[Administrator Guide](https://support.websoft9.com/docs/odoo)** 
 
 ## License
 
@@ -70,14 +60,16 @@ This program provided by Websoft9 contains a series of software with separate co
 
 ## FAQ
 
+#### How to install and view the latest release?
+
+This repository install way is Package isntallation , you can  view the version from [Official URL](https://www.odoo.com/page/release-notes).  
+We will check [Release version](https://github.com/Websoft9/ansible-odoo/releases) regularly. Update and test this project to ensure that users can successfully install the required version of RabbitMQ.
+
 #### Can I run this repository on Ansible Tower? 
 
 Yes.
 
-#### How to install and view the latest release?
+#### Although the results of the deploy by image are consistent with the results of deploy by script, what is the difference between the two deployment methods?
 
-Get the Odoo version from [Odoo repository](https://nightly.odoo.com/). Odoo publish the latest version every night, Odoo version format sample: Odoo14-20210221
+Suggest you read the document [Deploy by Image vs Deploy by Script](https://support.websoft9.com/docs/faq/bz-product.html#deployment-comparison).
 
-#### Is the default password safe?
-
-Odoo Cloud Installer use the random password solution, every installation have different password, that mean your password is different from other users
