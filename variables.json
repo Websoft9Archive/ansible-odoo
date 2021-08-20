@@ -8,7 +8,7 @@
   "requirements_Bandwidth": "100",
   "requirements_disk": "20",
   "requirements_swap": "2",
-  "requirements_configure_url": "https://www.odoo.com/zh_CN/forum/help-1/if-i-plan-for-100-users-what-are-some-suggestions-for-server-requirements-121217",
+  "requirements_configure_url": "https://www.odoo.com/forum/help-1/if-i-plan-for-100-users-what-are-some-suggestions-for-server-requirements-121217",
   "components": "Odoo,Python,Nginx,PostgreSQL",
   "install_way": {
     "en": "Package isntallation ",
