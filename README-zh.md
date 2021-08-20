@@ -16,7 +16,7 @@
 | 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
 | 服务器配置 | 最低1核2G，存储20GB以上，Swap分区2GB以上 |  建议采用按量100M带宽 |
 
-更多请见： [官方 System requirement](https://www.odoo.com/zh_CN/forum/help-1/if-i-plan-for-100-users-what-are-some-suggestions-for-server-requirements-121217)。
+更多请见： [官方 System requirement](https://www.odoo.com/forum/help-1/if-i-plan-for-100-users-what-are-some-suggestions-for-server-requirements-121217)。
 
 ## 组件
 

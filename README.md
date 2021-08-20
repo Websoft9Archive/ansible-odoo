@@ -19,7 +19,7 @@ System Requirement to install this repository are as following：
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
 | Server Configuration | vCPU no less than 1 core, Memory no less than 2 GIB, Storage no less than 20 GB, Swap no less than 2GB |Bandwidth no less than 100M|
 
-To learn more information, please view [Installation & Configuration](https://www.odoo.com/zh_CN/forum/help-1/if-i-plan-for-100-users-what-are-some-suggestions-for-server-requirements-121217).
+To learn more information, please view [Installation & Configuration](https://www.odoo.com/forum/help-1/if-i-plan-for-100-users-what-are-some-suggestions-for-server-requirements-121217).
 
 ## Ecosystem
 
