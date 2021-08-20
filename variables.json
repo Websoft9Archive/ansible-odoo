@@ -1,0 +1,18 @@
+{
+  "name": "odoo",
+  "trademark": "RabbitMQ",
+  "official_url": "https://www.odoo.com/",
+  "support_os": "Ubuntu20.04",
+  "requirements_cpu": "1",
+  "requirements_memory": "2",
+  "requirements_Bandwidth": "100",
+  "requirements_disk": "20",
+  "requirements_swap": "2",
+  "requirements_configure_url": "https://www.odoo.com/zh_CN/forum/help-1/if-i-plan-for-100-users-what-are-some-suggestions-for-server-requirements-121217",
+  "components": "Odoo,Python,Nginx,PostgreSQL",
+  "install_way": {
+    "en": "Package isntallation ",
+    "zh": "包安装"
+  },
+  "install_url": "https://www.odoo.com/page/release-notes"
+}
