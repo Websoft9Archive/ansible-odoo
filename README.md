@@ -1,4 +1,4 @@
-# RabbitMQ Cloud Installer
+# Odoo Cloud Installer
 
 ![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**RabbitMQ Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [RabbitMQ](https://www.odoo.com/) based on Ansible and shell. It helps user install RabbitMQ and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+**Odoo Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Odoo](https://www.odoo.com/) based on Ansible and shell. It helps user install Odoo and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ## System Requirement
 
@@ -44,7 +44,7 @@ If the network is broken or blocked, SSH will be interrupted and the installatio
 
 #### Image on Cloud 
 
-Follow our [RabbitMQ image](https://apps.websoft9.com/odoo) for installation on major Cloud Platform.
+Follow our [Odoo image](https://apps.websoft9.com/odoo) for installation on major Cloud Platform.
 
 ## Documentation
 
@@ -63,7 +63,7 @@ This program provided by Websoft9 contains a series of software with separate co
 #### How to install and view the latest release?
 
 This repository install way is Package isntallation , you can  view the version from [Official URL](https://www.odoo.com/page/release-notes).  
-We will check [Release version](https://github.com/Websoft9/ansible-odoo/releases) regularly. Update and test this project to ensure that users can successfully install the required version of RabbitMQ.
+We will check [Release version](https://github.com/Websoft9/ansible-odoo/releases) regularly. Update and test this project to ensure that users can successfully install the required version of Odoo.
 
 #### Can I run this repository on Ansible Tower? 
 
