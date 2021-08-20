@@ -28,7 +28,7 @@ sidebarDepth: 3
 
 ### 企业版
 
-部署 Odoo 企业版后，根据镜像引导页面向 Odoo 官方人员获取试用授权，便可以免费试用一个月。
+部署 Odoo 企业版后，根据镜像引导页获取试用授权，便可以免费试用一个月。
 
 1. 使用本地 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 进入欢迎页面
   ![Odoo 欢迎页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/odoo/odoo-eewelcome-websoft9.png)
@@ -51,6 +51,8 @@ bash /etc/odoo/ee_init.sh
   ![Odoo 注册提示](https://libs.websoft9.com/Websoft9/DocsPicture/en/odoo/odoo-registersb002-websoft9.png)
 
 7. 更多应用的安装和系统管理类似社区版
+
+> 免费试用期结束之后，到 [Odoo 官方](https://www.odoo.com/zh_CN/pricing)进行企业版订阅，需折扣可以联系我们。
 
 
 ### 数据库管理
