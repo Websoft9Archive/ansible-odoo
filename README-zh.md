@@ -5,6 +5,12 @@
 
 本项目是由 [Websoft9](https://www.websoft9.com) 研发的 [Odoo](https://www.odoo.com/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 Odoo，并预配置必要项，让原本复杂的安装和与配置过程变得没有任何技术门槛。
 
+除了默认安装之外，我们还针对Odoo部署进行了如下的改进：
+
+* 安装htmltopdf插件和中文字体，方便导出中文pdf表单
+* 安装PostgreSQL可视化管理工具phpPgadmin，便于用户操作和维护数据库
+* 采用Nginx做端口转发，输入IP地址即可访问Odoo，无需带端口号
+
 ## 配置要求
 
 安装本项目，确保符合如下的条件：
