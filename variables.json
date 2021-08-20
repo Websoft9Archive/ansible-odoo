@@ -1,6 +1,6 @@
 {
   "name": "odoo",
-  "trademark": "RabbitMQ",
+  "trademark": "Odoo",
   "official_url": "https://www.odoo.com/",
   "support_os": "Ubuntu20.04",
   "requirements_cpu": "1",
