@@ -14,7 +14,8 @@
       2: Odoo11\n
       3: Odoo12\n
       4: Odoo13\n
-      5: Odoo14\n"
+      5: Odoo14\n
+      6: Odoo15\n"
       private: no
       default: 5
       
@@ -32,6 +33,7 @@
       '3': "12.0"
       '4': "13.0"
       '5': "14.0"
+      '6': "15.0"
       
     odoo_distribution_select:
       '1': "ce"
